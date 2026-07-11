@@ -14,6 +14,7 @@
     --border: rgba(0, 0, 0, 0.08);
     --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
     --header-bg: rgba(245, 245, 247, 0.8);
+    --link: #248a3d;
     color-scheme: light;
 }
 
@@ -25,6 +26,7 @@
     --border: rgba(255, 255, 255, 0.1);
     --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
     --header-bg: rgba(16, 16, 18, 0.8);
+    --link: #34c759;
     color-scheme: dark;
 }
 
@@ -47,8 +49,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-a { color: var(--accent-strong); text-decoration: none; }
-:root[data-theme="dark"] a { color: var(--accent); }
+a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ---------- Header ---------- */
