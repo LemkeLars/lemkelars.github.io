@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lars Lemke</title>
+    <meta name="description" content="Lars Lemke — iOS apps made in Germany. Home of SpeedTracker.">
+    <link rel="icon" type="image/png" href="assets/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <script>
+        // Bootstrap theme + language before first paint (no flash of wrong mode).
+        (function () {
+            var t = null, l = null;
+            try { t = localStorage.getItem("theme"); l = localStorage.getItem("lang"); } catch (e) {}
+            document.documentElement.setAttribute("data-theme",
+                t || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+            var q = new URLSearchParams(location.search).get("lang");
+            var lang = (q === "de" || q === "en") ? q
+                : (l || (((navigator.language || "en").toLowerCase().indexOf("de") === 0) ? "de" : "en"));
+            document.documentElement.setAttribute("data-lang", lang);
+            document.documentElement.setAttribute("lang", lang);
+        })();
+    </script>
+    <script src="assets/site.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="./">Lars Lemke</a>
+        <div class="header-controls">
+            <button id="lang-toggle" class="control-btn" type="button" aria-label="Switch language">
+                <span id="lang-label">DE</span>
+            </button>
+            <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="wide">
+        <section class="hero">
+            <span class="avatar-emoji">👋</span>
+            <h1 data-lang="de">Hi, ich bin Lars.</h1>
+            <h1 data-lang="en">Hi, I'm Lars.</h1>
+            <p data-lang="de">Ich entwickle Apps für iPhone und iPad — mit Fokus auf saubere Technik, Datenschutz und Liebe zum Detail.</p>
+            <p data-lang="en">I build apps for iPhone and iPad — with a focus on solid engineering, privacy, and attention to detail.</p>
+        </section>
+
+        <section class="card app-card">
+            <img class="app-icon light-variant" src="assets/speedtracker-icon-light.png" alt="SpeedTracker app icon" width="96" height="96">
+            <img class="app-icon dark-variant" src="assets/speedtracker-icon-dark.png" alt="SpeedTracker app icon (dark)" width="96" height="96">
+            <div class="app-info">
+                <h2>SpeedTracker</h2>
+                <p class="app-tagline" data-lang="de">Zeichne jede Fahrt auf — GPS-präzise, mit Live-Aktivität, Charts und Garage für mehrere Autos. Deine Daten bleiben bei dir.</p>
+                <p class="app-tagline" data-lang="en">Record every drive — GPS-precise, with Live Activity, charts, and a multi-car garage. Your data stays yours.</p>
+                <div class="app-links">
+                    <a class="pill-link primary" href="speedtracker/support.html" data-lang="de">Support</a>
+                    <a class="pill-link primary" href="speedtracker/support.html" data-lang="en">Support</a>
+                    <a class="pill-link" href="speedtracker/privacy.html" data-lang="de">Datenschutz</a>
+                    <a class="pill-link" href="speedtracker/privacy.html" data-lang="en">Privacy Policy</a>
+                </div>
+                <p class="muted" style="margin-top: 0.9rem;" data-lang="de">Bald im App Store.</p>
+                <p class="muted" style="margin-top: 0.9rem;" data-lang="en">Coming soon to the App Store.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:lars@larslemke.com">lars@larslemke.com</a>
+            <a href="speedtracker/privacy.html" data-lang="de">Datenschutz</a>
+            <a href="speedtracker/privacy.html" data-lang="en">Privacy</a>
+            <a href="speedtracker/support.html">Support</a>
+        </div>
+        <div>© 2026 Lars Lemke</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedTracker — Privacy Policy · Datenschutzerklärung</title>
+    <meta name="description" content="Privacy policy for the SpeedTracker iOS app. SpeedTracker does not collect any data — everything stays on your device or in your personal iCloud.">
+    <link rel="icon" type="image/png" href="../assets/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="../assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script>
+        (function () {
+            var t = null, l = null;
+            try { t = localStorage.getItem("theme"); l = localStorage.getItem("lang"); } catch (e) {}
+            document.documentElement.setAttribute("data-theme",
+                t || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+            var q = new URLSearchParams(location.search).get("lang");
+            var lang = (q === "de" || q === "en") ? q
+                : (l || (((navigator.language || "en").toLowerCase().indexOf("de") === 0) ? "de" : "en"));
+            document.documentElement.setAttribute("data-lang", lang);
+            document.documentElement.setAttribute("lang", lang);
+        })();
+    </script>
+    <script src="../assets/site.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../">
+            <img class="app-icon light-variant" src="../assets/speedtracker-icon-light.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:7px;box-shadow:none;">
+            <img class="app-icon dark-variant" src="../assets/speedtracker-icon-dark.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:7px;box-shadow:none;">
+            SpeedTracker
+        </a>
+        <div class="header-controls">
+            <button id="lang-toggle" class="control-btn" type="button" aria-label="Switch language">
+                <span id="lang-label">DE</span>
+            </button>
+            <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= DEUTSCH ================= -->
+        <article data-lang="de">
+            <h1>Datenschutzerklärung</h1>
+            <p class="subtitle">für die iOS-App „SpeedTracker“ · Stand: 11. Juli 2026</p>
+
+            <div class="card highlight-card">
+                <p><strong>Das Wichtigste in einem Satz:</strong> SpeedTracker sendet keine Daten an uns oder an Dritte. Alle Aufzeichnungen bleiben auf deinem Gerät — und, wenn du es möchtest, zusätzlich in deiner persönlichen iCloud.</p>
+            </div>
+
+            <h2>1. Verantwortlicher</h2>
+            <p>Lars Lemke<br>
+            E-Mail: <a href="mailto:lars@larslemke.com">lars@larslemke.com</a></p>
+
+            <h2>2. Welche Daten die App verarbeitet</h2>
+            <p>SpeedTracker verarbeitet Daten ausschließlich, um seine Kernfunktion zu erfüllen — das Aufzeichnen deiner Fahrten:</p>
+            <ul>
+                <li><strong>Standortdaten (GPS):</strong> Position, Geschwindigkeit, Höhe und Fahrtrichtung. Während einer aktiven Aufzeichnung auch im Hintergrund.</li>
+                <li><strong>Bewegungssensordaten:</strong> Beschleunigungswerte der Gerätesensoren, um die Anzeige zu glätten und GPS-Aussetzer (z.&nbsp;B. in Tunneln) zu überbrücken.</li>
+                <li><strong>Fahrtdaten:</strong> aus den obigen Daten berechnete Werte wie Strecke, Route, Höchst- und Durchschnittsgeschwindigkeit.</li>
+                <li><strong>Fahrzeugdaten:</strong> Angaben, die du selbst in der Garage einträgst (z.&nbsp;B. Modell, Leistung, Farbe).</li>
+                <li><strong>Einstellungen:</strong> deine App-Einstellungen (z.&nbsp;B. Einheiten).</li>
+            </ul>
+            <p>Die Verarbeitung beginnt erst, wenn du eine Aufzeichnung aktiv startest. Es gibt keine Konten, keine Registrierung und keine Nutzerprofile.</p>
+
+            <h2>3. Wo deine Daten gespeichert werden</h2>
+            <ul>
+                <li><strong>Lokal auf deinem Gerät.</strong> Das ist der Standard.</li>
+                <li><strong>Optional in deiner persönlichen iCloud.</strong> Wenn du die iCloud-Synchronisation aktiviert lässt, werden Fahrten, Fahrzeuge und Einstellungen in der <em>privaten</em> iCloud-Datenbank deines Apple-Kontos gespeichert (Apple CloudKit), damit sie auf deinen anderen Geräten verfügbar sind. Auf diese Daten haben ausschließlich du und Apple als dein Vertragspartner Zugriff — <strong>nicht der Entwickler</strong>. Es gilt ergänzend die <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Datenschutzrichtlinie von Apple</a>. Die Synchronisation kannst du jederzeit in den App-Einstellungen deaktivieren.</li>
+            </ul>
+
+            <h2>4. Was nicht passiert</h2>
+            <ul>
+                <li>Keine Übermittlung von Daten an den Entwickler.</li>
+                <li>Keine Analyse-, Statistik- oder Werbedienste von Drittanbietern.</li>
+                <li>Kein Tracking, keine Werbe-IDs, keine Profilbildung.</li>
+                <li>Keine eigenen Server — die App kommuniziert außer mit Apples iCloud (sofern aktiviert) mit niemandem.</li>
+            </ul>
+            <p>Eine Weitergabe von Daten findet nur statt, wenn du sie selbst auslöst — etwa wenn du eine Fahrt als Bild teilst oder als GPX-/CSV-Datei exportierst. Was mit diesen Dateien geschieht, liegt allein in deiner Hand.</p>
+
+            <h2>5. Rechtsgrundlage</h2>
+            <p>Die Verarbeitung erfolgt zur Bereitstellung der von dir angeforderten Funktionen (Art. 6 Abs. 1 lit. b DSGVO). Die optionale iCloud-Synchronisation beruht auf deiner Entscheidung, sie zu nutzen (Art. 6 Abs. 1 lit. a DSGVO); du kannst sie jederzeit mit Wirkung für die Zukunft deaktivieren.</p>
+
+            <h2>6. Speicherdauer und Löschung</h2>
+            <ul>
+                <li>Fahrten und Fahrzeuge kannst du jederzeit in der App löschen. Bei aktiver iCloud-Synchronisation wird die Löschung auf deine anderen Geräte übertragen.</li>
+                <li>Mit dem Löschen der App werden alle lokal gespeicherten Daten entfernt.</li>
+                <li>In iCloud gespeicherte Daten kannst du zusätzlich über die iCloud-Einstellungen deines Geräts verwalten und löschen.</li>
+            </ul>
+            <p>Da beim Entwickler keine Daten anfallen, gibt es dort auch nichts zu löschen.</p>
+
+            <h2>7. Berechtigungen der App</h2>
+            <ul>
+                <li><strong>Standort („Beim Verwenden“ / „Immer“):</strong> erforderlich für die Geschwindigkeits- und Streckenaufzeichnung, auch bei gesperrtem Bildschirm. Ohne diese Berechtigung ist keine Aufzeichnung möglich.</li>
+                <li><strong>Mitteilungen (optional):</strong> für lokale Hinweise, z.&nbsp;B. wenn eine Fahrt automatisch beendet wurde. Es handelt sich ausschließlich um lokal erzeugte Mitteilungen — es gibt keinen Push-Server des Entwicklers.</li>
+            </ul>
+
+            <h2>8. Deine Rechte</h2>
+            <p>Dir stehen die Rechte aus Art. 15–21 DSGVO zu (Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit, Widerspruch) sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO). Bitte beachte: Da der Entwickler keinen Zugriff auf deine Daten hat, lassen sich Auskunft und Löschung praktisch vollständig direkt in der App bzw. über dein iCloud-Konto umsetzen. Bei Fragen erreichst du mich unter <a href="mailto:lars@larslemke.com">lars@larslemke.com</a>.</p>
+
+            <h2>9. Änderungen dieser Erklärung</h2>
+            <p>Wenn sich die App oder die Rechtslage ändert, wird diese Erklärung angepasst. Die jeweils aktuelle Fassung findest du unter dieser Adresse.</p>
+        </article>
+
+        <!-- ================= ENGLISH ================= -->
+        <article data-lang="en">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">for the iOS app “SpeedTracker” · Last updated: July 11, 2026</p>
+
+            <div class="card highlight-card">
+                <p><strong>The short version:</strong> SpeedTracker does not send any data to us or to third parties. All recordings stay on your device — and, if you choose, in your personal iCloud.</p>
+            </div>
+
+            <h2>1. Controller</h2>
+            <p>Lars Lemke<br>
+            Email: <a href="mailto:lars@larslemke.com">lars@larslemke.com</a></p>
+
+            <h2>2. What data the app processes</h2>
+            <p>SpeedTracker processes data exclusively to perform its core function — recording your drives:</p>
+            <ul>
+                <li><strong>Location data (GPS):</strong> position, speed, altitude, and heading. During an active recording this also happens in the background.</li>
+                <li><strong>Motion sensor data:</strong> acceleration readings from the device sensors, used to smooth the display and bridge GPS dropouts (e.g. in tunnels).</li>
+                <li><strong>Trip data:</strong> values derived from the above, such as distance, route, top and average speed.</li>
+                <li><strong>Vehicle data:</strong> details you enter yourself in the garage (e.g. model, power, color).</li>
+                <li><strong>Settings:</strong> your app preferences (e.g. units).</li>
+            </ul>
+            <p>Processing only starts when you actively begin a recording. There are no accounts, no sign-up, and no user profiles.</p>
+
+            <h2>3. Where your data is stored</h2>
+            <ul>
+                <li><strong>Locally on your device.</strong> This is the default.</li>
+                <li><strong>Optionally in your personal iCloud.</strong> If you keep iCloud sync enabled, trips, vehicles, and settings are stored in the <em>private</em> iCloud database of your Apple Account (Apple CloudKit) so they are available on your other devices. Only you and Apple — as your contract partner — can access this data; <strong>the developer cannot</strong>. Apple’s <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">privacy policy</a> applies in addition. You can turn off sync at any time in the app’s settings.</li>
+            </ul>
+
+            <h2>4. What does not happen</h2>
+            <ul>
+                <li>No data is transmitted to the developer.</li>
+                <li>No third-party analytics, statistics, or advertising services.</li>
+                <li>No tracking, no advertising identifiers, no profiling.</li>
+                <li>No developer-operated servers — apart from Apple’s iCloud (if enabled), the app talks to no one.</li>
+            </ul>
+            <p>Data only leaves the app when you actively choose to share it — for example when you share a trip as an image or export it as a GPX/CSV file. What happens to those files is entirely up to you.</p>
+
+            <h2>5. Legal basis</h2>
+            <p>Processing is carried out to provide the features you request (Art. 6(1)(b) GDPR). The optional iCloud sync is based on your decision to use it (Art. 6(1)(a) GDPR); you can disable it at any time with effect for the future.</p>
+
+            <h2>6. Retention and deletion</h2>
+            <ul>
+                <li>You can delete trips and vehicles in the app at any time. With iCloud sync enabled, deletions propagate to your other devices.</li>
+                <li>Deleting the app removes all locally stored data.</li>
+                <li>Data stored in iCloud can additionally be managed and deleted via your device’s iCloud settings.</li>
+            </ul>
+            <p>Since no data ever reaches the developer, there is nothing to delete on our side.</p>
+
+            <h2>7. App permissions</h2>
+            <ul>
+                <li><strong>Location (“While Using” / “Always”):</strong> required for speed and route recording, including while the screen is locked. Recording is not possible without this permission.</li>
+                <li><strong>Notifications (optional):</strong> for local alerts, e.g. when a trip was stopped automatically. These are generated locally on your device — there is no developer push server.</li>
+            </ul>
+
+            <h2>8. Your rights</h2>
+            <p>You have the rights under Art. 15–21 GDPR (access, rectification, erasure, restriction of processing, data portability, objection) as well as the right to lodge a complaint with a data protection supervisory authority (Art. 77 GDPR). Please note: since the developer has no access to your data, access and erasure can effectively be exercised entirely within the app or via your iCloud account. For any questions, contact me at <a href="mailto:lars@larslemke.com">lars@larslemke.com</a>.</p>
+
+            <h2>9. Changes to this policy</h2>
+            <p>If the app or the legal situation changes, this policy will be updated. The current version is always available at this address.</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../">Lars Lemke</a>
+            <a href="support.html">Support</a>
+            <a href="mailto:lars@larslemke.com">lars@larslemke.com</a>
+        </div>
+        <div>© 2026 Lars Lemke</div>
+    </footer>
+</body>
+</html>

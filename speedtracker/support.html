@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedTracker — Support</title>
+    <meta name="description" content="Support and FAQ for the SpeedTracker iOS app.">
+    <link rel="icon" type="image/png" href="../assets/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="../assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script>
+        (function () {
+            var t = null, l = null;
+            try { t = localStorage.getItem("theme"); l = localStorage.getItem("lang"); } catch (e) {}
+            document.documentElement.setAttribute("data-theme",
+                t || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+            var q = new URLSearchParams(location.search).get("lang");
+            var lang = (q === "de" || q === "en") ? q
+                : (l || (((navigator.language || "en").toLowerCase().indexOf("de") === 0) ? "de" : "en"));
+            document.documentElement.setAttribute("data-lang", lang);
+            document.documentElement.setAttribute("lang", lang);
+        })();
+    </script>
+    <script src="../assets/site.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="../">
+            <img class="app-icon light-variant" src="../assets/speedtracker-icon-light.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:7px;box-shadow:none;">
+            <img class="app-icon dark-variant" src="../assets/speedtracker-icon-dark.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:7px;box-shadow:none;">
+            SpeedTracker
+        </a>
+        <div class="header-controls">
+            <button id="lang-toggle" class="control-btn" type="button" aria-label="Switch language">
+                <span id="lang-label">DE</span>
+            </button>
+            <button id="theme-toggle" class="control-btn" type="button" aria-label="Toggle dark mode">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-hero">
+            <img class="app-icon light-variant" src="../assets/speedtracker-icon-light.png" alt="SpeedTracker app icon" width="64" height="64">
+            <img class="app-icon dark-variant" src="../assets/speedtracker-icon-dark.png" alt="SpeedTracker app icon (dark)" width="64" height="64">
+            <div class="titles">
+                <h1>SpeedTracker Support</h1>
+                <p data-lang="de">Fragen, Feedback oder ein Problem? Ich helfe gern.</p>
+                <p data-lang="en">Questions, feedback, or a problem? Happy to help.</p>
+            </div>
+        </div>
+
+        <!-- ================= DEUTSCH ================= -->
+        <section data-lang="de">
+            <div class="card highlight-card">
+                <p><strong>Kontakt:</strong> Schreib mir einfach eine E-Mail an <a href="mailto:lars@larslemke.com">lars@larslemke.com</a> — am besten mit einer kurzen Beschreibung, deinem iPhone-Modell und der iOS-Version. Ich antworte in der Regel innerhalb weniger Tage.</p>
+            </div>
+
+            <h2>Häufige Fragen</h2>
+
+            <details>
+                <summary>Warum braucht SpeedTracker die Standortberechtigung „Immer“?</summary>
+                <p>Damit eine Fahrt auch dann weiter aufgezeichnet wird, wenn das Display gesperrt ist oder du eine andere App benutzt. Die Berechtigung wird ausschließlich während einer aktiven Aufzeichnung genutzt — ohne laufende Aufzeichnung greift die App nicht im Hintergrund auf deinen Standort zu.</p>
+            </details>
+
+            <details>
+                <summary>Wo werden meine Fahrten gespeichert?</summary>
+                <p>Lokal auf deinem Gerät und — wenn du die iCloud-Synchronisation aktiviert lässt — in der privaten iCloud deines Apple-Kontos, damit deine Fahrten auf allen Geräten verfügbar sind. An den Entwickler oder Dritte werden keine Daten gesendet. Details stehen in der <a href="privacy.html">Datenschutzerklärung</a>.</p>
+            </details>
+
+            <details>
+                <summary>Wie exportiere ich Fahrten?</summary>
+                <p>Öffne eine Fahrt und wähle im Menü „Daten exportieren“ — als GPX (für andere Apps wie Strava oder GPX-Viewer) oder CSV. Mehrere Fahrten auf einmal exportierst du über die Auswahlfunktion in der Fahrtenliste. GPX-Dateien kannst du auch wieder importieren.</p>
+            </details>
+
+            <details>
+                <summary>Warum wurde meine Aufzeichnung automatisch beendet?</summary>
+                <p>SpeedTracker erkennt, wenn du längere Zeit stillstehst — etwa weil du vergessen hast, die Aufzeichnung zu stoppen. Du bekommst zuerst eine Mitteilung; reagierst du nicht, wird die Fahrt automatisch gespeichert und beendet. Beides kannst du in den Einstellungen anpassen oder abschalten.</p>
+            </details>
+
+            <details>
+                <summary>Was passiert im Tunnel oder bei schlechtem GPS-Empfang?</summary>
+                <p>Die App erkennt GPS-Aussetzer über die Bewegungssensoren und überbrückt sie, statt falsche Nullwerte aufzuzeichnen. In der Fahrtansicht siehst du einen Hinweis, wenn während der Fahrt das GPS-Signal zeitweise weg war.</p>
+            </details>
+
+            <details>
+                <summary>Meine Fahrten synchronisieren nicht zwischen meinen Geräten.</summary>
+                <p>Prüfe, ob du auf beiden Geräten mit demselben Apple-Konto angemeldet bist, iCloud Drive aktiv ist und in den SpeedTracker-Einstellungen die iCloud-Synchronisation eingeschaltet ist. Nach dem Einschalten kann die erste Synchronisation einige Minuten dauern.</p>
+            </details>
+        </section>
+
+        <!-- ================= ENGLISH ================= -->
+        <section data-lang="en">
+            <div class="card highlight-card">
+                <p><strong>Contact:</strong> Just send an email to <a href="mailto:lars@larslemke.com">lars@larslemke.com</a> — ideally with a short description, your iPhone model, and iOS version. I usually reply within a few days.</p>
+            </div>
+
+            <h2>Frequently asked questions</h2>
+
+            <details>
+                <summary>Why does SpeedTracker need the “Always” location permission?</summary>
+                <p>So that a trip keeps recording while your screen is locked or you are using another app. The permission is only used during an active recording — without a running recording, the app does not access your location in the background.</p>
+            </details>
+
+            <details>
+                <summary>Where are my trips stored?</summary>
+                <p>Locally on your device and — if you keep iCloud sync enabled — in the private iCloud of your Apple Account, so your trips are available on all your devices. No data is sent to the developer or any third party. See the <a href="privacy.html">privacy policy</a> for details.</p>
+            </details>
+
+            <details>
+                <summary>How do I export trips?</summary>
+                <p>Open a trip and choose “Export Data” from the menu — as GPX (for other apps like Strava or GPX viewers) or CSV. To export several trips at once, use the selection mode in the trip list. GPX files can also be imported back.</p>
+            </details>
+
+            <details>
+                <summary>Why was my recording stopped automatically?</summary>
+                <p>SpeedTracker detects when you have been stationary for a while — for example because you forgot to stop the recording. You get a notification first; if you don’t react, the trip is saved and ended automatically. Both behaviors can be adjusted or disabled in Settings.</p>
+            </details>
+
+            <details>
+                <summary>What happens in tunnels or with poor GPS reception?</summary>
+                <p>The app detects GPS dropouts using the motion sensors and bridges them instead of recording false zero values. The trip view shows a notice if the GPS signal was temporarily lost during a drive.</p>
+            </details>
+
+            <details>
+                <summary>My trips don’t sync between my devices.</summary>
+                <p>Make sure both devices are signed in with the same Apple Account, iCloud Drive is enabled, and iCloud sync is turned on in SpeedTracker’s settings. After enabling it, the first sync can take a few minutes.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../">Lars Lemke</a>
+            <a href="privacy.html" data-lang="de">Datenschutz</a>
+            <a href="privacy.html" data-lang="en">Privacy</a>
+            <a href="mailto:lars@larslemke.com">lars@larslemke.com</a>
+        </div>
+        <div>© 2026 Lars Lemke</div>
+    </footer>
+</body>
+</html>
